@@ -104,3 +104,21 @@ microInsuranceSidebarBack.addEventListener('click', () => {
   // servicesSidebarLink.classList.remove('gradual-fadeIn');
   servicesSidebarLink.classList.remove('hide');
 })
+
+
+const sideEffect = document.querySelector('.side-effect');
+const aboutUsSummary = document.querySelector('#about-us-summary');
+
+window.addEventListener('scroll', () => {
+  const aboutUsSummaryBounding = aboutUsSummary.getBoundingClientRect();
+  console.log('boundng', aboutUsSummaryBounding.top);
+  if(aboutUsSummaryBounding.top + aboutUsSummaryBounding.height / 2 < window.innerHeight){
+    sideEffect.style.top = aboutUsSummaryBounding.top + (aboutUsSummaryBounding.height / 2);
+     sideEffect.style.left = aboutUsSummaryBounding.width + 30;
+    //  sideEffect.style.display = "fixed";
+  }
+  if(aboutUsSummaryBounding.top + 10 >= window.innerHeight){
+    sideEffect.style.display = "none";
+  }
+})
+

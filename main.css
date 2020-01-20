@@ -8,14 +8,43 @@ center-all-mini, #header #call-us {
   align-items: center;
 }
 
-box-shadow, .summary-card {
-  -webkit-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.54);
-  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.54);
+.underline {
+  border-bottom: 2px solid #0077C1;
+}
+
+box-shadow, #services-summary-main #services-summary .services-card, .side-effect, .summary-card {
+  -webkit-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  -ms-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  -moz-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  box-shadow: -1px 1px 5px 1px rgba(7, 7, 7, 0.5);
+}
+
+paragraph, #services-summary-main #services-summary .services-card, #about-summary-section #About-us-summary p {
+  line-height: 22px;
+  letter-spacing: 0.6px;
+  font-size: 14px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+}
+body p {
+  color: #555353;
+}
+body h4 {
+  margin-bottom: 30px;
+  color: #EB3D00;
+}
+body .read-more {
+  color: #fff;
+  background-color: #EB3D00;
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  text-justify: ju;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.8px;
 }
 
 .hide {
@@ -167,7 +196,6 @@ body {
   background-repeat: no-repeat;
   background-position: bottom left;
   min-height: 40vh;
-  background-color: #18F561;
 }
 
 #banner3 {
@@ -175,7 +203,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 40vh;
-  background-color: #18F561;
 }
 
 #banner1, #banner2, #banner3 {
@@ -197,11 +224,50 @@ body {
 .summary-card p {
   font-size: 12px;
 }
-.summary-card .read-more {
-  color: #fff;
+
+#about-summary-section #About-us-summary {
+  padding-top: 30px;
+}
+.side-effect {
+  position: fixed;
+  width: 100px;
+  height: 150px;
+  background-color: #0077C1;
+  transform: rotate(-47deg);
+  z-index: -1;
+}
+
+.side-effect-inner {
   background-color: #EB3D00;
-  font-size: 12px;
-  padding: 5px 10px 5px 10px;
+  margin: 10px;
+  width: 80;
+  height: 80;
+}
+
+#services-summary-main {
+  background-color: #f3f3f3;
+}
+#services-summary-main #services-summary .services-card {
+  background-color: #fff;
+  width: 300px;
+  padding: 10px;
+}
+#services-summary-main #services-summary .carousel-item {
+  border-radius: 5px;
+}
+
+#page-footer {
+  background-color: #000000;
+  color: #fff;
+}
+#page-footer ul {
+  list-style-type: none;
+}
+#page-footer ul a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {

@@ -4,20 +4,51 @@
 }
 $primary-color: #0077C1;
 $secondary-color: #EB3D00;
+$text-color: rgb(85, 83, 83);
 center-all-mini{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-box-shadow{
-  -webkit-box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.54);
--moz-box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.54);
-box-shadow: 0px 4px 10px -2px rgba(0,0,0,0.54);
+.underline{
+  border-bottom: 2px solid $primary-color;
 }
 
+box-shadow{
+  -webkit-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  -ms-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  -moz-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
+  box-shadow: -1px 1px 5px 1px rgba(7, 7, 7, 0.5);
+}
+paragraph{
+  line-height: 22px;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+}
 body{
   font-family: 'Roboto', sans-serif;
+ & p{
+   color: $text-color;
+   
+ }
+
+ & h4{
+  margin-bottom: 30px;
+  color: $secondary-color;
+}
+
+ .read-more{
+  color:#fff;
+  background-color: $secondary-color;
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  text-justify: ju;
+}
+}
+
+h1,h2,h3,h4,h5,h6{
+  letter-spacing: 0.8px;
 }
 .hide{
   display:none;
@@ -182,7 +213,6 @@ body{
   background-image: url(images/car.png);
   height: 40vh;
   background-size: cover;
-  // background-position: 0px 50px;
   background-repeat: no-repeat;
   background-color: #FAFEFE;
   
@@ -194,15 +224,12 @@ body{
   background-repeat: no-repeat;
   background-position: bottom left;
   min-height: 40vh;
-  background-color: #18F561;
 }
 #banner3{
   background-image: url(images/house.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  // background-position: bottom left;
   min-height: 40vh;
-  background-color: #18F561;
 }
 
 #banner1,#banner2,#banner3{
@@ -225,12 +252,6 @@ body{
     font-size: 12px;
     
   }
-  .read-more{
-    color:#fff;
-    background-color: $secondary-color;
-    font-size: 12px;
-    padding: 5px 10px 5px 10px;
-  }
 }
 
 // .summary-card:nth-child(1){
@@ -240,8 +261,63 @@ body{
 //     color: #fff;
 //   }
 // }
+#about-summary-section{
+
+  #About-us-summary{
+    padding-top: 30px;
+     & p{
+     @extend paragraph;
+    }
+  }
+}
 
 
+  .side-effect{
+    position: fixed;
+    width: 100px;
+    height: 150px;
+    background-color: $primary-color;
+    transform: rotate(-47deg);
+    z-index: -1;
+    @extend box-shadow;
+  }
+
+  .side-effect-inner{
+    background-color: $secondary-color;
+    margin: 10px;
+    width: 80;
+    height: 80;
+  }
+#services-summary-main{
+  background-color: rgb(243, 243, 243) ;
+  #services-summary{
+    .services-card{
+      background-color: #fff;
+      width: 300px;
+      padding: 10px;
+      @extend box-shadow;
+      @extend paragraph;
+    }
+    .carousel-item{
+      border-radius: 5px;
+    }
+  }
+}
+
+#page-footer{
+  background-color: #000000;
+  color: #fff;
+  & ul{
+    list-style-type: none;
+
+    & a{
+      text-decoration: none;
+      display: block;
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}
 // MEDIA QUERIES***********************************************************************************
 @media (min-width: 768px) {
   center-all{
