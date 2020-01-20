@@ -13,10 +13,10 @@ center-all-mini, #header #call-us {
 }
 
 box-shadow, #services-summary-main #services-summary .services-card, .side-effect, .summary-card {
-  -webkit-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
-  -ms-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
-  -moz-box-shadow: -1px -1px 5px 5px rgba(226, 226, 226, 0.5);
-  box-shadow: -1px 1px 5px 1px rgba(7, 7, 7, 0.5);
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(7, 7, 7, 0.4);
+  -ms-box-shadow: 1px 5px 5px 0px rgba(7, 7, 7, 0.4);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(7, 7, 7, 0.4);
+  box-shadow: 1px 5px 5px 0px rgba(7, 7, 7, 0.4);
 }
 
 paragraph, #services-summary-main #services-summary .services-card, #about-summary-section #About-us-summary p {
@@ -251,6 +251,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   width: 300px;
   padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 #services-summary-main #services-summary .carousel-item {
   border-radius: 5px;
