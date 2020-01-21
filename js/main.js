@@ -107,18 +107,36 @@ microInsuranceSidebarBack.addEventListener('click', () => {
 
 
 const sideEffect = document.querySelector('.side-effect');
-const aboutUsSummary = document.querySelector('#about-us-summary');
-
+const aboutUsSummary = document.querySelector('#about-us-summary-section');
+const navContainer = document.querySelector("#nav-container");
+const header = document.querySelector("#header");
+let initialNavContainerTop;
+let yOffset = window.pageYOffset;
+window.addEventListener('load', () => {
+ initialNavContainerTop = header.getBoundingClientRect().height;
+ if(yOffset >= initialNavContainerTop){
+  navContainer.classList.add('sticky-nav');
+}
+})
 window.addEventListener('scroll', () => {
   const aboutUsSummaryBounding = aboutUsSummary.getBoundingClientRect();
-  console.log('boundng', aboutUsSummaryBounding.top);
+  const navContainerBounding = navContainer.getBoundingClientRect();
   if(aboutUsSummaryBounding.top + aboutUsSummaryBounding.height / 2 < window.innerHeight){
     sideEffect.style.top = aboutUsSummaryBounding.top + (aboutUsSummaryBounding.height / 2);
-     sideEffect.style.left = aboutUsSummaryBounding.width + 30;
-    //  sideEffect.style.display = "fixed";
+     sideEffect.style.left = aboutUsSummaryBounding.width - 30;
   }
   if(aboutUsSummaryBounding.top + 10 >= window.innerHeight){
     sideEffect.style.display = "none";
+  }
+
+  yOffset = window.pageYOffset;
+  if(yOffset >= initialNavContainerTop){
+    navContainer.classList.add('sticky-nav');
+  }else{
+    if(navContainer.classList.contains('sticky-nav')){
+
+      navContainer.classList.remove('sticky-nav')
+    }
   }
 })
 
